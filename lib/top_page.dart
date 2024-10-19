@@ -93,7 +93,8 @@ class _TopPageState extends State<TopPage> {
                       backgroundColor: const Color(0xFF9ECEFF),
                     ),
                     onPressed: () {
-                      Navigator.pushNamed(context, "/navigation");
+                      Navigator.pushNamed(context, "/navigation")
+                          .then((value) => {value.toString()});
                     },
                     child: const Text(
                       'Navigationページ',
