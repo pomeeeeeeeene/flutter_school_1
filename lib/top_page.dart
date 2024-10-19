@@ -77,7 +77,8 @@ class _TopPageState extends State<TopPage> {
                       backgroundColor: const Color(0xFF9ECEFF),
                     ),
                     onPressed: () {
-                      Navigator.pushNamed(context, "/hello");
+                      Navigator.pushNamed(context, "/hello",
+                          arguments: "matsumoto");
                     },
                     child: const Text(
                       'Helloページ',
