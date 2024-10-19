@@ -50,6 +50,7 @@ class _HelloPage extends State<HelloPage> {
                       backgroundColor: const Color(0xFF9ECEFF),
                     ),
                     onPressed: () {
+                      // トップページを開いてその間の画面は全て閉じる (popする)
                       Navigator.pushNamedAndRemoveUntil(
                           context, "/", (route) => false);
                     },
