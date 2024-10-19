@@ -11,6 +11,8 @@ class TopPage extends StatefulWidget {
 }
 
 class _TopPageState extends State<TopPage> {
+  String? retunValue; // 画面の戻り値を取得するための変数
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
