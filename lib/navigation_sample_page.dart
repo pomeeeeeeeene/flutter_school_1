@@ -54,6 +54,22 @@ class NavigationSamplePage extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF9ECEFF),
+                  ),
+                  onPressed: () {
+                    // 呼び出し元にcompleteという戻り値を返す
+                    Navigator.pop(context, "complete");
+                  },
+                  child: const Text(
+                    '呼び出し元に戻る(戻り値あり)',
+                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
