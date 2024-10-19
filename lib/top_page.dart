@@ -11,7 +11,7 @@ class TopPage extends StatefulWidget {
 }
 
 class _TopPageState extends State<TopPage> {
-  String? retunValue; // 画面の戻り値を取得するための変数
+  String? returnValue; // 画面の戻り値を取得するための変数
 
   @override
   Widget build(BuildContext context) {
@@ -96,7 +96,11 @@ class _TopPageState extends State<TopPage> {
                     ),
                     onPressed: () {
                       Navigator.pushNamed(context, "/navigation")
-                          .then((value) => {value.toString()});
+                          .then((value) => {
+                                setState(() {
+                                  returnValue = value.toString();
+                                })
+                              });
                     },
                     child: const Text(
                       'Navigationページ',
@@ -104,6 +108,7 @@ class _TopPageState extends State<TopPage> {
                     ),
                   ),
                 ),
+                Text("戻り値： ${returnValue ?? '戻り値なし'}"),
               ],
             ),
           ),
