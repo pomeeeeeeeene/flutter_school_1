@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         "/widget_text_field": (BuildContext context) =>
             const WidgetTextFieldSamplePage(title: 'TextFieldサンプル'),
         "/hello": (BuildContext context) =>
-            const HelloPage(title: 'Hello', 'suzuki'),
+            const HelloPage(title: 'Hello', name: 'suzuki'),
       },
     );
   }

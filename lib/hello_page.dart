@@ -6,7 +6,7 @@ class HelloPage extends StatefulWidget {
   const HelloPage(
       {super.key, required this.title, this.name}); // コンストラクタ（初期化処理をするためのもの）
   final String title; // requiredがあるため必須で値を渡す必要がある
-  final String name; // requiredがないので人で値を渡すことができる
+  final String? name; // requiredがないので人で値を渡すことができる
 
   @override
   State<HelloPage> createState() => _HelloPage();
@@ -33,7 +33,7 @@ class _HelloPage extends State<HelloPage> {
             child: Column(
               // 縦にコンテンツを配置
               mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[Text("Hello !! ${name ?? 'no name'}")],
+              children: <Widget>[Text("Hello !! ${widget.name ?? 'no name'}")],
             ),
           ),
         ),
