@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "/", // 最初に起動した時の表示する画面
       routes: <String, WidgetBuilder>{
         "/": (BuildContext context) => const TopPage(title: 'Flutter サンプル'),
-        "/count_up": (BuildContext context) =>
+        "/countup": (BuildContext context) =>
             const MyHomePage(title: 'カウントアップ'),
         "/widget": (BuildContext context) =>
             const WidgetSamplePage(title: 'Widgetサンプル'),

@@ -32,7 +32,7 @@ class _TopPageState extends State<TopPage> {
                       backgroundColor: const Color(0xFF9ECEFF),
                     ),
                     onPressed: () {
-                      Navigator.pushNamed(context, "/count_up");
+                      Navigator.pushNamed(context, "/countup");
                     },
                     child: const Text(
                       'カウントアップページ',
