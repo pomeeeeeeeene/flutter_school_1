@@ -21,24 +21,31 @@ class MyApp extends StatelessWidget {
   @override // オーバーライド（StatelessWidgetのメソッドを上書き）
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Androidのデザイン
-      title: 'Flutter Demo', // タイトル
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      initialRoute: "/", // 最初に起動した時の表示する画面
-      routes: <String, WidgetBuilder>{
-        "/": (BuildContext context) => const TopPage(title: 'Flutter サンプル'),
-        "/countup": (BuildContext context) =>
-            const MyHomePage(title: 'カウントアップ'),
-        "/widget": (BuildContext context) =>
-            const WidgetSamplePage(title: 'Widgetサンプル'),
-        "/widget_text_field": (BuildContext context) =>
-            const WidgetTextFieldSamplePage(title: 'TextFieldサンプル'),
-        "/hello": (BuildContext context) =>
-            const HelloPage(title: 'Hello', name: 'suzuki'),
-      },
-    );
+        // Androidのデザイン
+        title: 'Flutter Demo', // タイトル
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        initialRoute: "/", // 最初に起動した時の表示する画面
+        routes: <String, WidgetBuilder>{
+          "/": (BuildContext context) => const TopPage(title: 'Flutter サンプル'),
+          "/countup": (BuildContext context) =>
+              const MyHomePage(title: 'カウントアップ'),
+          "/widget": (BuildContext context) =>
+              const WidgetSamplePage(title: 'Widgetサンプル'),
+          "/widget_text_field": (BuildContext context) =>
+              const WidgetTextFieldSamplePage(title: 'TextFieldサンプル'),
+          //"/hello": (BuildContext context) =>
+          //    const HelloPage(title: 'Hello', name: 'matumoto'),
+        },
+        onGenerateRoute: (settings) {
+          final args = settings.arguments;
+          switch (settings.name) {
+            case "/hello":
+              return MaterialPageRoute(
+                  builder: (context) => HelloPage(title: 'Hello', name: args));
+          }
+        });
   }
 }
