@@ -42,7 +42,20 @@ class _HelloPage extends State<HelloPage> {
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    icon: Icon(Icons.arrow_back))
+                    icon: Icon(Icons.arrow_back)),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF9ECEFF),
+                    ),
+                    onPressed: () {},
+                    child: const Text(
+                      'Topページに戻る',
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
