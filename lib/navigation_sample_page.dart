@@ -39,6 +39,21 @@ class NavigationSamplePage extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF9ECEFF),
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/hello", arguments: "太郎");
+                  },
+                  child: const Text(
+                    'Helloページへ(引数あり)',
+                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
