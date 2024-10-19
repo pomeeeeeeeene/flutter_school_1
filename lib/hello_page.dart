@@ -49,7 +49,10 @@ class _HelloPage extends State<HelloPage> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF9ECEFF),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                          context, "/", (route) => false);
+                    },
                     child: const Text(
                       'Topページに戻る',
                       style: TextStyle(fontSize: 18, color: Colors.white),
