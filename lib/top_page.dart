@@ -70,6 +70,21 @@ class _TopPageState extends State<TopPage> {
                     ),
                   ),
                 ),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF9ECEFF),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/hello");
+                    },
+                    child: const Text(
+                      'Helloページ',
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
