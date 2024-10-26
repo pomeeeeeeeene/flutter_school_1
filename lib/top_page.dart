@@ -34,10 +34,55 @@ class _TopPageState extends State<TopPage> {
                       backgroundColor: const Color(0xFF9ECEFF),
                     ),
                     onPressed: () {
+                      Navigator.pushNamed(context, "/janken");
+                    },
+                    child: const Text(
+                      'じゃんけんゲームページ',
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF9ECEFF),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/lifecycle");
+                    },
+                    child: const Text(
+                      'Lifecycleページ',
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF9ECEFF),
+                    ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/mywidget");
+                    },
+                    child: const Text(
+                      'MyWidgetページ',
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF9ECEFF),
+                    ),
+                    onPressed: () {
                       Navigator.pushNamed(context, "/countup");
                     },
                     child: const Text(
-                      'カウントアップページ',
+                      'CountUpページ',
                       style: TextStyle(fontSize: 18, color: Colors.white),
                     ),
                   ),

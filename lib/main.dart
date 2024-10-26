@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:study/countup_sample_page.dart';
 import 'package:study/hello_page.dart';
+import 'package:study/jyanken_sample_page.dart';
+import 'package:study/lifecycle_sample_page.dart';
+import 'package:study/mywidget_sample_page.dart';
 import 'package:study/navigation_sample_page.dart';
 import 'package:study/top_page.dart';
 import 'package:study/whiget_textfield_sample_page.dart';
@@ -39,7 +42,12 @@ class MyApp extends StatelessWidget {
               const WidgetTextFieldSamplePage(title: 'TextFieldサンプル'),
           "/navigation": (BuildContext context) =>
               const NavigationSamplePage(title: 'Navigationサンプル'),
-
+          "/mywidget": (BuildContext context) =>
+              const MywidgetSamplePage(title: 'My Widgetサンプル'),
+          "/lifecycle": (BuildContext context) =>
+              const LifecycleSamplePage(title: 'ライフサイクルサンプル'),
+          "/janken": (BuildContext context) =>
+              const JankenSamplePage(title: 'じゃんけんゲームサンプル'),
           //"/hello": (BuildContext context) =>
           //    const HelloPage(title: 'Hello', name: 'matumoto'),
         },
